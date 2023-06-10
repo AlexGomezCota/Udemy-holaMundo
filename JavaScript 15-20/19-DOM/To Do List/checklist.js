@@ -14,7 +14,13 @@ window.onload = () =>{
         toDos.push(toDoText); 
         const toDoList = document.getElementById("toDo-list")
         const toDosTemplate = toDos.map (i => "<li>" + i + "</li>");
-        toDoList.innerHTML = toDosTemplate.join("")//join toma los elementos del array y los hace texto
-        
+        toDoList.innerHTML = toDosTemplate.join("");//join toma los elementos del array y los hace texto
+        const elementos = document.querySelectorAll("#toDo-list li");//esto le menciona a queryselector que buscamos que queremos los elementos de un listado que se encuentran dentro del id toDo-list
+        elementos.forEach((elemento, indice) => {
+            console.log(elemento, indice);
+            elemento.addEventListener("click", () => { 
+            console.log(elemento, indice);
+            })
+        })
     }
 }
