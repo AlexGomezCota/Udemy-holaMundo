@@ -19,7 +19,9 @@ window.onload = () =>{
         elementos.forEach((elemento, indice) => {
             console.log(elemento, indice);
             elemento.addEventListener("click", () => { 
-            console.log(elemento, indice);
+            elemento.parentNode.removeChild(elemento)//esto es para que se elimine el elemento al hacer clic
+            toDos.splice(1, 1) //splice elimina elementos de un array. 
+            //dentro del parentesis (numero de elementos,)
             })
         })
     }
